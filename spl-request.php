@@ -39,9 +39,13 @@ class SPL_Request {
 		$open = $this->rt->search("Queue='Automation'ANDStatus='open'",'-Created', 's');
 		unset($open['']);
 
-		$keys = implode(',',array_keys($open));
+		$tickets = array();
 
-		return '<pre>'.print_r($keys, true).'</pre>';
+		foreach ( $open as $id=>$subject ) {
+			$tickets[$id] = $this->rt->getTicket($id);
+		}
+
+		return '<pre>'.print_r($tickets, true).'</pre>';
 	}
 
 }

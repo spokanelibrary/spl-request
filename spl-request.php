@@ -42,7 +42,8 @@ class SPL_Request {
 		$tickets = array();
 
 		foreach ( $open as $id=>$subject ) {
-			$tickets[$id] = $this->rt->getTicketProperties($id);
+			//$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
+			$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
 		}
 
 		return '<pre>'.print_r($tickets, true).'</pre>';

@@ -79,7 +79,6 @@ class SPL_Request {
 				if ( 0 == $i%2  ) {
 					$dash .= '<div class="row">'.PHP_EOL;	
 				}
-
 				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<div class="panel panel-default">'.PHP_EOL;
 				$dash .= '<div class="panel-body">'.PHP_EOL;
@@ -122,6 +121,7 @@ class SPL_Request {
 				$dash .= '<h4 class="modal-title">'.$ticket['subject'].' ['.$id.']</h4>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="modal-body">'.PHP_EOL;
+				$dash .= 'This is a test';
 				foreach ( $ticket['history'] as $c=>$comment ) {
 					//if ( !in_array($comment['Type'], array('Set', 'SetWatcher', 'Status'))  ) {	
 						$dash .= '<h5 class="text-right"><span class="label label-primary">'.$comment['Type'].'</span></h5>'.PHP_EOL;

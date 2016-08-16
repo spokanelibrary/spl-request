@@ -16,7 +16,10 @@ Version: 0.1
 
 function wp_spl_request($config=null) {
 	
-	return 'This is a test.';
+	$user = getenv('SPL_RT_USER');
+	$pass = getenv('SPL_RT_PASS');
+
+	return 'This is a test: ' . $user;
 }
 
 add_shortcode('spl_request', 'wp_spl_request');

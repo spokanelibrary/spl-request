@@ -124,7 +124,7 @@ class SPL_Request {
 				foreach ( $ticket['history'] as $c=>$comment ) {
 					//$dash .= '<h5 class="text-right"><span class="label label-default">'.$comment['Type'].'</span></h5>'.PHP_EOL;
 					//$dash .= '<h5>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
-					$dash .= '<p><small>'.nl2br($comment['Content']).'</small></p>'.PHP_EOL;
+					//$dash .= '<p><small>'.nl2br($comment['Content']).'</small></p>'.PHP_EOL;
 				}
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="modal-footer">'.PHP_EOL;

@@ -88,7 +88,7 @@ class SPL_Request {
 				$dash .= '<h5 class=""><span class="label label-'.$status.'">'.$ticket['properties']['Status'].'</span></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-1">'.PHP_EOL;
-				$dash .= '<h5 class="">'.$id.'</h5>'.PHP_EOL;
+				$dash .= '<h6 class="">'.$id.'</h6>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-8">'.PHP_EOL;
 				$dash .= '<h5 class="text-right"><small class="help-block">'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;

@@ -25,7 +25,7 @@ function wp_spl_request($config=null) {
 	$rt = new RequestTracker($url, $user, $pass);
 
 
-	$response = $rt->search("Owner='Nobody'",'-Created', 's');
+	$response = $rt->search("Queue='Automation'&Status='open'",'-Created', 's');
 
 	return '<pre>'.print_r($response, true).'</pre>';
 }

@@ -60,6 +60,9 @@ class SPL_Request {
 			}	
 			$i = 1;
 			foreach ( $tickets as $id => $ticket ) {
+				if ( 0 == $i%2  ) {
+					$dash .= '<div class="row">'.PHP_EOL;	
+				}
 				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<div class="panel panel-default">'.PHP_EOL;
 				$dash .= '<div class="panel panel-body">'.PHP_EOL;
@@ -67,7 +70,9 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
-
+				if ( 0 != $i%2  ) {
+					$dash .= '</div>'.PHP_EOL;	
+				}
 				$i++;
 			}
 		}

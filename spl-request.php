@@ -53,7 +53,7 @@ class SPL_Request {
 		$dash .= '<div class="panel spl-hero-intranet spl-hero-brand-blue-a">'.PHP_EOL;
 		$dash .= '<div class="panel-heading">'.PHP_EOL;
 		$dash .= '<h4>';
-		$dash .= '<i class="glyphicon glyphicon-cog"></i> ';
+		$dash .= '<i class="glyphicon glyphicon-dashboard"></i> ';
 		$dash .= 'IT Request Tracker <small>dashboard view</small>';
 		$dash .= '</h4>'.PHP_EOL;
 		$dash .= '</div>'.PHP_EOL;

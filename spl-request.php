@@ -87,7 +87,10 @@ class SPL_Request {
 				$dash .= '<div class="col-sm-2">'.PHP_EOL;
 				$dash .= '<h5 class=""><span class="label label-'.$status.'">'.$ticket['properties']['Status'].'</span></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
-				$dash .= '<div class="col-sm-9">'.PHP_EOL;
+				$dash .= '<div class="col-sm-1">'.PHP_EOL;
+				$dash .= '<h5 class="">'.$id.'</h5>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
+				$dash .= '<div class="col-sm-8">'.PHP_EOL;
 				$dash .= '<h5 class="text-right"><small class="help-block">'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-1">'.PHP_EOL;
@@ -125,7 +128,7 @@ class SPL_Request {
 				foreach ( $ticket['history'] as $c=>$comment ) {
 					if ( !in_array($comment['Type'], array('Set', 'SetWatcher', 'Status', 'AddLink'))  ) {	
 						$dash .= '<h5 class="text-right"><span class="label label-primary">'.$comment['Type'].'</span></h5>'.PHP_EOL;
-						$dash .= '<h4>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
+						$dash .= '<h5>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
 						
 						$text = $comment['Content'];
 						//$text = preg_replace("/[\r\n]+/", "\n", $text);

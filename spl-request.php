@@ -47,7 +47,7 @@ class SPL_Request {
 		$dash = '<script type="text/javascript">
 				    setTimeout(function () { 
 				      location.reload();
-				    }, 60 * 1000);
+				    }, 1 * (1000 * 60) );
 				</script>';
 
 		$dash .= '<div class="panel spl-hero-intranet spl-hero-brand-blue-a">'.PHP_EOL;
@@ -98,7 +98,7 @@ class SPL_Request {
 				$dash .= '<h5 class="text-right"><small class="help-block">'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-1">'.PHP_EOL;
-				$dash .= '<h5 class="text-right"><span class="label label-'.$status.'">'.$ticket['properties']['Status'].'</span></h5>'.PHP_EOL;
+				$dash .= '<h5 class=""><span class="label label-'.$status.'">'.$ticket['properties']['Status'].'</span></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-1">'.PHP_EOL;
 				$dash .= '<a rel="external" class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'"><i class="glyphicon glyphicon-wrench"></i></a>';

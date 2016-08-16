@@ -15,24 +15,32 @@ Version: 0.1
 */
 
 function wp_spl_request($config=null) {
-	require_once 'RTPHPLib/RequestTracker.php';
+	$request = new SPL_Request();
 
-	$url = "http://rt.spokanelibrary.org/";
-
-	$user = getenv('SPL_RT_USER');
-	$pass = getenv('SPL_RT_PASS');
-
-	$rt = new RequestTracker($url, $user, $pass);
-
-
-	$response = $rt->search("Queue='Automation'ANDStatus='open'",'-Created', 's');
-
-	return '<pre>'.print_r($response, true).'</pre>';
+	return $request->getDashboard();
 }
 
 add_shortcode('spl_request', 'wp_spl_request');
 
+class SPL_Request {
+	var $rt;
 
+	function __construct() {
+		require_once 'RTPHPLib/RequestTracker.php';
 
+		$url = "http://rt.spokanelibrary.org/";
+		$user = getenv('SPL_RT_USER');
+		$pass = getenv('SPL_RT_PASS');
+
+		$this->rt = new RequestTracker($url, $user, $pass);
+	}
+
+	public function getDashboard() {
+		$response = $this->rt->search("Queue='Automation'ANDStatus='open'",'-Created', 's');
+
+		return '<pre>'.print_r($response, true).'</pre>';
+	}
+
+}
 
 ?>

@@ -57,7 +57,7 @@ class SPL_Request {
 			foreach ( $open as $id => $subject ) {
 				$tickets[$id]['subject'] = $subject;
 				$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
-				$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
+				//$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
 			}	
 			$i = 0;
 			foreach ( $tickets as $id => $ticket ) {
@@ -114,6 +114,7 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 
 
+				/*
 				$dash .= '<div class="modal fade" id="spl-rt-'.$id.'" tabindex="-1" role="dialog">'.PHP_EOL;
 				$dash .= '<div class="modal-dialog" role="document">'.PHP_EOL;
 				$dash .= '<div class="modal-content">'.PHP_EOL;
@@ -136,7 +137,7 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
-
+				*/
 				
 
 				$dash .= '</div>'.PHP_EOL;

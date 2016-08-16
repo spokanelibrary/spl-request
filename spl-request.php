@@ -115,7 +115,7 @@ class SPL_Request {
 
 
 				
-				$dash .= '<div class="modal fade" id="spl-rt-'.$id.'" tabindex="-1" role="dialog">'.PHP_EOL;
+				$dash .= '<div class="modal hide" id="spl-rt-'.$id.'" tabindex="-1" role="dialog">'.PHP_EOL;
 				$dash .= '<div class="modal-dialog" role="document">'.PHP_EOL;
 				$dash .= '<div class="modal-content">'.PHP_EOL;
 				$dash .= '<div class="modal-header">'.PHP_EOL;

@@ -43,6 +43,13 @@ class SPL_Request {
 		$tickets = array();
 
 		$dash = '';
+
+		$dash = '<script type="text/javascript">
+				    setTimeout(function () { 
+				      location.reload();
+				    }, 60 * 1000);
+				</script>';
+
 		$dash .= '<div class="panel spl-hero-intranet spl-hero-brand-blue-a">'.PHP_EOL;
 		$dash .= '<div class="panel-heading">'.PHP_EOL;
 		$dash .= '<h4>';
@@ -88,7 +95,7 @@ class SPL_Request {
 				$dash .= '<h5 class=""><span class="label label-'.$status.'">'.$ticket['properties']['Status'].'</span></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-1">'.PHP_EOL;
-				$dash .= '<h5 class="">'.$id.'</h5>'.PHP_EOL;
+				$dash .= '<span class="help-block">'.$id.'</span>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-8">'.PHP_EOL;
 				$dash .= '<h5 class="text-right"><small class="help-block">'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
@@ -100,9 +107,9 @@ class SPL_Request {
 				
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-12">'.PHP_EOL;
-				$dash .= '<h4>';
+				$dash .= '<h5>';
 				$dash .= '<a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'"><i class="glyphicon glyphicon-share"></i> '.$ticket['subject'].'</a>';
-				$dash .= '</h4>'.PHP_EOL;
+				$dash .= '</h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 

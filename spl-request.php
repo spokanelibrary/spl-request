@@ -58,7 +58,7 @@ class SPL_Request {
 				$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
 				//$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
 			}	
-			$i = 1;
+			$i = 0;
 			foreach ( $tickets as $id => $ticket ) {
 				if ( 0 == $i%2  ) {
 					$dash .= '<div class="row">'.PHP_EOL;	

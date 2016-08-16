@@ -113,6 +113,7 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 
 
+
 				$dash .= '<div class="modal fade" id="spl-rt-'.$id.'" tabindex="-1" role="dialog">'.PHP_EOL;
 				$dash .= '<div class="modal-dialog" role="document">'.PHP_EOL;
 				$dash .= '<div class="modal-content">'.PHP_EOL;
@@ -127,6 +128,8 @@ class SPL_Request {
 						$dash .= '<h4>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
 						
 						$text = $comment['Content'];
+						$text = preg_replace("/[\r\n]+/", '<span class="text-danger">\r\n</span>', $text);
+
 						//$text = preg_replace("/[\r\n]+/", "\n", $text);
 						//$text = preg_replace('/(\r\n|\n|\r){3,}/', "$1$1", $text);
 						//$text = nl2br($text);

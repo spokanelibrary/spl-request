@@ -37,7 +37,7 @@ class SPL_Request {
 	}
 
 	public function getDashboard() {
-		$open = $this->rt->search("Queue='Automation'ANDStatus='new'",'-Created', 's');
+		$open = $this->rt->search("Queue='Automation'(ANDStatus='new'ORStatus='open')",'-Created', 's');
 		unset($open['']);
 
 		$tickets = array();

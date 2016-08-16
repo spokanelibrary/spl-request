@@ -128,7 +128,7 @@ class SPL_Request {
 						$dash .= '<h4>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
 						
 						$text = $comment['Content'];
-						$text = preg_replace("/[\r\n]/", '<span class="text-danger">\r\n</span>', $text);
+						//$text = preg_replace("/[\r\n]/", '<span class="text-danger">\r\n</span>', $text);
 
 						$text = preg_replace("/[\r\n\r\n]/", '<br>', $text);
 

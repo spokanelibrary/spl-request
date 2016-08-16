@@ -47,7 +47,7 @@ class SPL_Request {
 		$dash = '<script type="text/javascript">
 				    setTimeout(function () { 
 				      location.reload();
-				    }, 60 * 100);
+				    }, 60 * 1000);
 				</script>';
 
 		$dash .= '<div class="panel spl-hero-intranet spl-hero-brand-blue-a">'.PHP_EOL;

@@ -126,7 +126,7 @@ class SPL_Request {
 					if ( !in_array($comment['Type'], array('Set', 'SetWatcher', 'Status'))  ) {	
 						$dash .= '<h5 class="text-right"><span class="label label-primary">'.$comment['Type'].'</span></h5>'.PHP_EOL;
 						$dash .= '<h4>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
-						$dash .= '<p><small>'.nl2br($comment['Content']).'</small></p>'.PHP_EOL;
+						$dash .= '<p><small>'.nl2br(preg_replace("/[\r\n]+/", "\n", $comment['Content'])).'</small></p>'.PHP_EOL;
 					}
 				}
 				$dash .= '</div>'.PHP_EOL;

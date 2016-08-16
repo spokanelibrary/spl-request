@@ -130,7 +130,7 @@ class SPL_Request {
 						$text = $comment['Content'];
 						//$text = preg_replace("/[\r\n]/", '<span class="text-danger">\r\n</span>', $text);
 
-						$text = preg_replace("[\r\n\r\n]", '<br>', $text);
+						$text = preg_replace('"(\r?\n){2,}"', "<br>", $text);
 
 						//$text = preg_replace("/[\r\n]+/", "\n", $text);
 						//$text = preg_replace('/(\r\n|\n|\r){3,}/', "$1$1", $text);

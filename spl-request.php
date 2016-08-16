@@ -37,6 +37,7 @@ class SPL_Request {
 
 	public function getDashboard() {
 		$open = $this->rt->search("Queue='Automation'ANDStatus='open'",'-Created', 's');
+		unset($open['']);
 
 		$keys = array_keys($open);
 

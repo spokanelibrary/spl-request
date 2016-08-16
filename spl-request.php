@@ -69,6 +69,7 @@ class SPL_Request {
 				$dash .= '<h4>';
 				$dash .= $ticket['subject'];
 				$dash .= '</h4>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="panel-body">'.PHP_EOL;
 				$dash .= '<h4>'.$ticket['subject'].'</h4>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;

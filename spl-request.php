@@ -71,9 +71,18 @@ class SPL_Request {
 				$dash .= $ticket['subject'];
 				$dash .= '<a class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'"><i class="glyphicon glyphicon-wrench"></i></a>';
 				$dash .='</h5>'.PHP_EOL;
+				$dash .= '<h6>Created: '.$ticket['properties']['Created'].'</h6>'.PHP_EOL;
 				$dash .= '<hr>'.PHP_EOL;
+
+				$dash .= '<div class="row">'.PHP_EOL;
+				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<h6>Owner: '.$ticket['properties']['Owner'].'</h6>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
+				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<h6>Requestor: '.$ticket['properties']['Creator'].'</h6>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
+
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;

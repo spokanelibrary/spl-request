@@ -99,7 +99,8 @@ class SPL_Request {
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-12">'.PHP_EOL;
 				$dash .= '<h5>';
-				$dash .= '<a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'"><i class="glyphicon glyphicon-share'.$ticket['subject'].'</a>';
+				//$dash .= '<a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'"><i class="glyphicon glyphicon-share'.$ticket['subject'].'</a>';
+				$dash .= '<a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'"><i class="glyphicon glyphicon-share"></i>'.$ticket['subject'].'</a>';
 				$dash .= '</h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
@@ -114,7 +115,7 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 
 
-				
+				/*
 				$dash .= '<div class="modal hide" id="spl-rt-'.$id.'" tabindex="-1" role="dialog">'.PHP_EOL;
 				$dash .= '<div class="modal-dialog" role="document">'.PHP_EOL;
 				$dash .= '<div class="modal-content">'.PHP_EOL;
@@ -137,7 +138,7 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
-				
+				*/
 				
 
 				$dash .= '</div>'.PHP_EOL;

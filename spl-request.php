@@ -67,12 +67,11 @@ class SPL_Request {
 				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<div class="panel panel-default">'.PHP_EOL;
 				$dash .= '<div class="panel-body">'.PHP_EOL;
+				$dash .= '<h6><span class="text-muted">Created:</span> '.$ticket['properties']['Created'].'</h6>'.PHP_EOL;
 				$dash .= '<h5>';
 				$dash .= $ticket['subject'];
 				$dash .= '<a class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'"><i class="glyphicon glyphicon-wrench"></i></a>';
 				$dash .='</h5>'.PHP_EOL;
-				$dash .= '<h6>Created: '.$ticket['properties']['Created'].'</h6>'.PHP_EOL;
-				$dash .= '<hr>'.PHP_EOL;
 
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-4">'.PHP_EOL;

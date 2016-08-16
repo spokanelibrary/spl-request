@@ -99,8 +99,8 @@ class SPL_Request {
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-12">'.PHP_EOL;
 				$dash .= '<h5>';
-				$dash .= '<a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'">'.$ticket['subject'].'</a>';
-				$dash .='</h5>'.PHP_EOL;
+				$dash .= '<a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'"><i class="glyphicon glyphicon-share'.$ticket['subject'].'</a>';
+				$dash .= '</h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 
@@ -126,7 +126,7 @@ class SPL_Request {
 					if ( !in_array($comment['Type'], array('Set', 'SetWatcher', 'Status'))  ) {	
 						$dash .= '<h5 class="text-right"><span class="label label-primary">'.$comment['Type'].'</span></h5>'.PHP_EOL;
 						$dash .= '<h4>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
-						$dash .= '<p>'.nl2br($comment['Content']).'</p>'.PHP_EOL;
+						$dash .= '<p><small>'.nl2br($comment['Content']).'</small></p>'.PHP_EOL;
 					}
 				}
 				$dash .= '</div>'.PHP_EOL;

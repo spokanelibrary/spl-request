@@ -75,6 +75,9 @@ class SPL_Request {
 					case 'open':
 						$status = 'warning';
 						break;
+					case 'stalled':
+						$status = 'default';
+						break;
 					case 'resolved':
 						$status = 'success';
 						break;

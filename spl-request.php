@@ -57,7 +57,7 @@ class SPL_Request {
 			foreach ( $open as $id => $subject ) {
 				$tickets[$id]['subject'] = $subject;
 				$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
-				//$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
+				$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
 			}	
 			$i = 0;
 			foreach ( $tickets as $id => $ticket ) {

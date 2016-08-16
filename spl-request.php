@@ -62,7 +62,7 @@ class SPL_Request {
 			'<h4 class="text-success">No open tickets!</h4>'.PHP_EOL;
 		} else {
 			foreach ( $open as $id => $subject ) {
-				$tickets[$id]['subject'] = $subject;
+				$tickets[$id]['subject'] = ucfirst($subject);
 				$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
 				$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
 			}	

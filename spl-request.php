@@ -37,7 +37,7 @@ class SPL_Request {
 	}
 
 	public function getDashboard() {
-		$open = $this->rt->search("Queue='Automation'AND(Status='new'ORStatus='open')",'-Created', 's');
+		$open = $this->rt->search("Queue='Automation'AND(Status='new'ORStatus='open'ORStatus='stalled')",'-Created', 's');
 		unset($open['']);
 
 		$tickets = array();
@@ -86,7 +86,7 @@ class SPL_Request {
 				
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-8">'.PHP_EOL;
-				$dash .= '<h5 class="text-right"><span class="label label-'.$status.'">'.$ticket['properties']['Status'].'</span></h5>'.PHP_EOL;
+				$dash .= '<h5 class=""><span class="label label-'.$status.'">'.$ticket['properties']['Status'].'</span></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-4">'.PHP_EOL;
 				$dash .= '<h5 class="text-right"><small>'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;

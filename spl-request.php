@@ -69,11 +69,11 @@ class SPL_Request {
 				$dash .= '<div class="panel-body">'.PHP_EOL;
 				
 				$dash .= '<div class="row">'.PHP_EOL;
-				$dash .= '<div class="col-sm-6">'.PHP_EOL;
+				$dash .= '<div class="col-sm-6 text-right">'.PHP_EOL;
 				$dash .= '<span class="label label-info">'.$ticket['properties']['Status'].'</span>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
-				$dash .= '<div class="col-sm-6">'.PHP_EOL;
-				$dash .= '<h5 class="text-right"><small>'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
+				$dash .= '<div class="col-sm-6 text-right">'.PHP_EOL;
+				$dash .= '<h5><small>'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 

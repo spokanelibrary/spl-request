@@ -41,6 +41,8 @@ class SPL_Request {
 		unset($open['']);
 
 		$tickets = array();
+
+		return 'test';
 		
 		$dash = '';
 		$dash .= '<div class="panel spl-hero-intranet spl-hero-brand-blue-a">'.PHP_EOL;

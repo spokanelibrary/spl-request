@@ -123,9 +123,12 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="modal-body">'.PHP_EOL;
 				foreach ( $ticket['history'] as $c=>$comment ) {
-					$dash .= '<h5 class="text-right"><span class="label label-default">'.$comment['Type'].'</span></h5>'.PHP_EOL;
-					$dash .= '<h5>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
-					$dash .= '<p><small>'.nl2br($comment['Content']).'</small></p>'.PHP_EOL;
+					if ( !in_array($comment['Type'], array('Set', 'SetWatcher', 'Status'))  ) {	
+						$dash .= '<h5 class="text-right"><span class="label label-default">'.$comment['Type'].'</span></h5>'.PHP_EOL;
+						$dash .= '<h5>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
+						$dash .= '<p><small>'.nl2br($comment['Content']).'</small></p>'.PHP_EOL;
+						$dash .= '<hr>'.PHP_EOL;
+					}
 				}
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="modal-footer">'.PHP_EOL;

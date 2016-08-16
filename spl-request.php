@@ -97,7 +97,7 @@ class SPL_Request {
 				$dash .= '<div class="col-sm-12">'.PHP_EOL;
 				$dash .= '<h5 style="margin-top:10px;">';
 				$dash .= '<a class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'"><i class="glyphicon glyphicon-wrench"></i></a>';
-				$dash .= $ticket['subject'];
+				$dash .= '<button class="btn btn-link">'.$ticket['subject'].'</button>;
 				$dash .='</h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;

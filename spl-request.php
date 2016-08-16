@@ -92,14 +92,14 @@ class SPL_Request {
 				$dash .= '<h5 class="text-right"><small class="help-block">'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-1">'.PHP_EOL;
-				$dash .= '<a class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'"><i class="glyphicon glyphicon-wrench"></i></a>';
+				$dash .= '<a rel="external" class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'"><i class="glyphicon glyphicon-wrench"></i></a>';
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-12">'.PHP_EOL;
 				$dash .= '<h5>';
-				$dash .= '<a href="#">'.$ticket['subject'].'</a>';
+				$dash .= '<a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'">'.$ticket['subject'].'</a>';
 				$dash .='</h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
@@ -113,6 +113,10 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 
+				foreach ( $ticket['history'] as $c=>$comment ) {
+					$dash .= '<h5>'.$comment['Content'].'</h5>'.PHP_EOL;
+				}
+
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
@@ -124,6 +128,8 @@ class SPL_Request {
 		}
 		$dash .= '</div>'.PHP_EOL;
 		$dash .= '</div>'.PHP_EOL;
+
+
 		
 		$dash .= '<pre>'.print_r($tickets, true).'</pre>';
 

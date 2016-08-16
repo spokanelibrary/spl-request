@@ -61,10 +61,6 @@ class SPL_Request {
 			}	
 			$i = 0;
 			foreach ( $tickets as $id => $ticket ) {
-				if ( 0 == $i%2  ) {
-					$dash .= '<div class="row">'.PHP_EOL;	
-				}
-
 				switch ( $ticket['properties']['Status'] ) {
 					case 'new':
 						$status = 'danger';
@@ -80,6 +76,10 @@ class SPL_Request {
 						break;
 				}
 
+				if ( 0 == $i%2  ) {
+					$dash .= '<div class="row">'.PHP_EOL;	
+				}
+
 				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<div class="panel panel-default">'.PHP_EOL;
 				$dash .= '<div class="panel-body">'.PHP_EOL;
@@ -93,11 +93,16 @@ class SPL_Request {
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 
+				$dash .= '<hr>'.PHP_EOL;
 				
-				$dash .= '<h5 class="clearfix">';
+				$dash .= '<div class="row">'.PHP_EOL;
+				$dash .= '<div class="col-sm-12">'.PHP_EOL;
+				$dash .= '<h5>';
 				$dash .= '<a class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'"><i class="glyphicon glyphicon-wrench"></i></a>';
 				$dash .= $ticket['subject'];
 				$dash .='</h5>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
 
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-4">'.PHP_EOL;

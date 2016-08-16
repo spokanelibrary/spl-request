@@ -121,7 +121,6 @@ class SPL_Request {
 				$dash .= '<h4 class="modal-title">'.$ticket['subject'].' ['.$id.']</h4>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="modal-body">'.PHP_EOL;
-				$dash .= 'This is a test';
 				foreach ( $ticket['history'] as $c=>$comment ) {
 					if ( !in_array($comment['Type'], array('Set', 'SetWatcher', 'Status', 'AddLink'))  ) {	
 						$dash .= '<h5 class="text-right"><span class="label label-primary">'.$comment['Type'].'</span></h5>'.PHP_EOL;
@@ -131,7 +130,7 @@ class SPL_Request {
 						//$text = preg_replace("/[\r\n]+/", "\n", $text);
 						$text = preg_replace('/(\r\n|\n|\r){3,}/', "$1$1", $text);
 						$text = nl2br($text);
-						$dash .= '<blockquote>'.$text.'</blockquote>'.PHP_EOL;
+						$dash .= '<p>'.$text.'</p>'.PHP_EOL;
 					}
 				}
 				$dash .= '</div>'.PHP_EOL;

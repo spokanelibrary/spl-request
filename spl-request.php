@@ -131,7 +131,7 @@ class SPL_Request {
 						//$text = preg_replace("/[\r\n]+/", "\n", $text);
 						$text = preg_replace('/(\r\n|\n|\r){3,}/', "$1$1", $text);
 						$text = nl2br($text);
-						$dash .= '<p><small>'.$text.'</small></p>'.PHP_EOL;
+						$dash .= '<blockquote>'.$text.'</blockquote>'.PHP_EOL;
 					}
 				}
 				$dash .= '</div>'.PHP_EOL;

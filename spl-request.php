@@ -55,15 +55,15 @@ class SPL_Request {
 		} else {
 			foreach ( $open as $id => $subject ) {
 				$tickets[$id]['subject'] = $subject;
-				$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
+				//$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
 				//$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
 			}	
 			foreach ( $tickets as $id => $ticket ) {
 				$dash .= '<h4>'.$ticket['subject'].'</h4>'.PHP_EOL;
 			}
 		}
-		$dash = '</div>'.PHP_EOL;
-		$dash = '</div>'.PHP_EOL;
+		$dash .= '</div>'.PHP_EOL;
+		$dash .= '</div>'.PHP_EOL;
 		
 		$dash .= '<pre>'.print_r($tickets, true).'</pre>';
 

@@ -40,14 +40,23 @@ class SPL_Request {
 		unset($open['']);
 
 		$tickets = array();
-
-		foreach ( $open as $id=>$subject ) {
-			$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
-			$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
+		
+		$dash = '<h3>IT Request Tracker <small>dashboard view</small></h3>'.PHP_EOL;
+		
+		if ( empty($dash) ) {
+			'<h4 class="text-success">No open tickets!</h4>'.PHP_EOL;
+		} else {
+			foreach ( $open as $id => $subject ) {
+				$tickets[$id]['subject'] = $subject;
+				$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
+				$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
+			}	
+			foreach ( $tickets as $id => $ticket ) {
+				$dash .= '<h4>'.$ticket['subject'].'</h4>'.PHP_EOL;
+			}
 		}
 
-		$dash = 'a dashboard';
-
+		
 		$dash .= '<pre>'.print_r($tickets, true).'</pre>';
 
 		return $dash;

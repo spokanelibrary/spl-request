@@ -115,8 +115,8 @@ class SPL_Request {
 
 
 				$dash .= '<div class="modal fade" id="spl-rt-'.$id.'" tabindex="-1" role="dialog">'.PHP_EOL;
-				//$dash .= '<div class="modal-dialog" role="document">'.PHP_EOL;
-				//$dash .= '<div class="modal-content">'.PHP_EOL
+				$dash .= '<div class="modal-dialog" role="document">'.PHP_EOL;
+				$dash .= '<div class="modal-content">'.PHP_EOL
 				//$dash .= '<div class="modal-header">'.PHP_EOL;
 				//$dash .= '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>'.PHP_EOL;
 				//$dash .= '<h4 class="modal-title">'.$ticket['subject'].' ['.$id.']</h4>'.PHP_EOL;
@@ -131,8 +131,8 @@ class SPL_Request {
 				//$dash .= '<div class="modal-footer">'.PHP_EOL;
 				//$dash .= '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>'.PHP_EOL;
 				//$dash .= '</div>'.PHP_EOL;
-				//$dash .= '</div>'.PHP_EOL;
-				//$dash .= '</div>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
+				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 
 				

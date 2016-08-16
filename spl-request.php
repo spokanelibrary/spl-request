@@ -69,7 +69,7 @@ class SPL_Request {
 				$dash .= '<div class="panel-body">'.PHP_EOL;
 				$dash .= '<h5>';
 				$dash .= $ticket['subject'];
-				$dash .= '<a class="btn btn-default btn-sm pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'">Edit</a>';
+				$dash .= '<a class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'">Edit</a>';
 				$dash .='</h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;

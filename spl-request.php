@@ -15,7 +15,8 @@ Version: 0.1
 */
 
 function wp_spl_request($config=null) {
-	
+	require_once '/RTPHPLib/RequestTracker.php';
+
 	$url = "http://rt.spokanelibrary.org/";
 
 	$user = getenv('SPL_RT_USER');

@@ -41,21 +41,29 @@ class SPL_Request {
 
 		$tickets = array();
 		
-		$dash = '<h3>IT Request Tracker <small>dashboard view</small></h3>'.PHP_EOL;
-		
+		$dash = '';
+		$dash .= '<div class="panel spl-hero-intranet spl-hero-brand-blue-a">'.PHP_EOL;
+		$dash .= '<div class="panel-heading">'.PHP_EOL;
+		$dash .= '<h4>';
+		$dash .= '<i class="glyphicon glyphicon-cog"></i> ';
+		$dash .= 'IT Request Tracker <small>dashboard view</small>';
+		$dash .= '</h4>'.PHP_EOL;
+		$dash .= '</div>'.PHP_EOL;
+		$dash .= '<div class="panel-body">'.PHP_EOL;
 		if ( empty($dash) ) {
 			'<h4 class="text-success">No open tickets!</h4>'.PHP_EOL;
 		} else {
 			foreach ( $open as $id => $subject ) {
 				$tickets[$id]['subject'] = $subject;
 				$tickets[$id]['properties'] = $this->rt->getTicketProperties($id);
-				$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
+				//$tickets[$id]['history'] = $this->rt->getTicketHistory($id);
 			}	
 			foreach ( $tickets as $id => $ticket ) {
 				$dash .= '<h4>'.$ticket['subject'].'</h4>'.PHP_EOL;
 			}
 		}
-
+		$dash = '</div>'.PHP_EOL;
+		$dash = '</div>'.PHP_EOL;
 		
 		$dash .= '<pre>'.print_r($tickets, true).'</pre>';
 

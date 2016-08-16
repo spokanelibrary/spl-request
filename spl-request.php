@@ -119,7 +119,7 @@ class SPL_Request {
 				$dash .= '<div class="modal-content">'.PHP_EOL;
 				$dash .= '<div class="modal-header">'.PHP_EOL;
 				$dash .= '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>'.PHP_EOL;
-				$dash .= '<h4 class="modal-title">'.$ticket['subject'].' ['.$id.']</h4>'.PHP_EOL;
+				$dash .= '<h4 class="modal-title">'.$ticket['subject'].' <small>'.$id.'<small></h4>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="modal-body">'.PHP_EOL;
 				foreach ( $ticket['history'] as $c=>$comment ) {

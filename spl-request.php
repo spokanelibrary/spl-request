@@ -64,16 +64,32 @@ class SPL_Request {
 				if ( 0 == $i%2  ) {
 					$dash .= '<div class="row">'.PHP_EOL;	
 				}
+
+				switch ( $ticket['properties']['Status'] ) {
+					case 'new':
+						$status = 'danger';
+						break;
+					case 'open':
+						$status = 'warning';
+						break;
+					case 'resolved':
+						$status = 'success';
+						break;
+					default:
+						$status = 'info';
+						break;
+				}
+
 				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<div class="panel panel-default">'.PHP_EOL;
 				$dash .= '<div class="panel-body">'.PHP_EOL;
 				
 				$dash .= '<div class="row">'.PHP_EOL;
-				$dash .= '<div class="col-sm-6 text-right">'.PHP_EOL;
-				$dash .= '<span class="label label-info">'.$ticket['properties']['Status'].'</span>'.PHP_EOL;
+				$dash .= '<div class="col-sm-8">'.PHP_EOL;
+				$dash .= '<h5 class="text-right"><span class="label label-'.$status.'">'.$ticket['properties']['Status'].'</span></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
-				$dash .= '<div class="col-sm-6 text-right">'.PHP_EOL;
-				$dash .= '<h5><small>'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
+				$dash .= '<div class="col-sm-4">'.PHP_EOL;
+				$dash .= '<h5 class="text-right"><small>'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 

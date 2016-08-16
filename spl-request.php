@@ -65,6 +65,10 @@ class SPL_Request {
 				}
 				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<div class="panel panel-default">'.PHP_EOL;
+				$dash .= '<div class="panel-heading">'.PHP_EOL;
+				$dash .= '<h4>';
+				$dash .= $ticket['subject'];
+				$dash .= '</h4>'.PHP_EOL;
 				$dash .= '<div class="panel-body">'.PHP_EOL;
 				$dash .= '<h4>'.$ticket['subject'].'</h4>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;

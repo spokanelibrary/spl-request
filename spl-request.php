@@ -74,10 +74,10 @@ class SPL_Request {
 				$dash .='</h5>'.PHP_EOL;
 
 				$dash .= '<div class="row">'.PHP_EOL;
-				$dash .= '<div class="col-sm-4">'.PHP_EOL;
+				$dash .= '<div class="col-sm-4" style="border-width:1px solid black;">'.PHP_EOL;
 				$dash .= '<h6><span class="text-muted">Owner:</span> '.$ticket['properties']['Owner'].'</h6>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
-				$dash .= '<div class="col-sm-8">'.PHP_EOL;
+				$dash .= '<div class="col-sm-8" style="border-width:1px solid black;">'.PHP_EOL;
 				$dash .= '<h6><span class="text-muted">Requestor:</span> '.$ticket['properties']['Creator'].'</h6>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;

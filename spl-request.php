@@ -16,13 +16,22 @@ Version: 0.1
 
 function wp_spl_request($config=null) {
 	
+	$url = "http://rt.spokanelibrary.org/";
+
 	$user = getenv('SPL_RT_USER');
 	$pass = getenv('SPL_RT_PASS');
 
-	return 'This is a test: ' . $user;
+	$rt = new RequestTracker($url, $user, $pass);
+
+
+	$response = $rt->search("Owner='Nobody'",'-Created', 's');
+
+	return '<pre>'.print_r($response, true).'</pre>';
 }
 
 add_shortcode('spl_request', 'wp_spl_request');
+
+
 
 
 ?>

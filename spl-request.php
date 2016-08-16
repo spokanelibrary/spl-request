@@ -128,15 +128,11 @@ class SPL_Request {
 						$dash .= '<h4>'.$comment['Creator'].' <small>'.$comment['Created'].'</small></h5>'.PHP_EOL;
 						
 						$text = $comment['Content'];
-						//$text = preg_replace("/[\r\n]/", '<span class="text-danger">\r\n</span>', $text);
-
-						$text = preg_replace('"(\r?\n){2,}"', "<br>", $text);
-
 						//$text = preg_replace("/[\r\n]+/", "\n", $text);
 						//$text = preg_replace('/(\r\n|\n|\r){3,}/', "$1$1", $text);
-
 						//$text = nl2br($text);
-						$dash .= '<p style="border-left:1px solid #666; padding-left: 6px;">'.$text.'</p>'.PHP_EOL;
+						$text = preg_replace('"(\r?\n){2,}"', "<br>", $text);
+						$dash .= '<p style="border-left:1px solid #ccc; padding-left: 10px;"><small>'.$text.'</small></p>'.PHP_EOL;
 					}
 				}
 				$dash .= '</div>'.PHP_EOL;

@@ -24,15 +24,16 @@ add_shortcode('spl_request', 'wp_spl_request');
 
 class SPL_Request {
 	var $rt;
+	var $url = "http://rt.spokanelibrary.org";
 
 	function __construct() {
 		require_once 'RTPHPLib/RequestTracker.php';
 
-		$url = "http://rt.spokanelibrary.org/";
+		
 		$user = getenv('SPL_RT_USER');
 		$pass = getenv('SPL_RT_PASS');
 
-		$this->rt = new RequestTracker($url, $user, $pass);
+		$this->rt = new RequestTracker($this->url, $user, $pass);
 	}
 
 	public function getDashboard() {
@@ -66,7 +67,7 @@ class SPL_Request {
 				$dash .= '<div class="col-sm-6">'.PHP_EOL;
 				$dash .= '<div class="panel panel-default">'.PHP_EOL;
 				$dash .= '<div class="panel-body">'.PHP_EOL;
-				$dash .= '<h5>'.$ticket['subject'].'</h5>'.PHP_EOL;
+				$dash .= '<h5><a href="'.$this->url.'/Ticket/Display.html?id='.$id.'">'.$ticket['subject'].'</a></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;

@@ -129,7 +129,7 @@ class SPL_Request {
 						
 						$text = $comment['Content'];
 						//$text = preg_replace("/[\r\n]+/", "\n", $text);
-						$text = preg_replace('/(\r\n|\n|\r)$1{2,}/', "$1$1", $text);
+						$text = preg_replace('/(\r\n|\n|\r){3,}/', "$1$1", $text);
 						$text = nl2br($text);
 						$dash .= '<p><small>'.$text.'</small></p>'.PHP_EOL;
 					}

@@ -91,7 +91,7 @@ class SPL_Request {
 				$dash .= '<h5 class="">'.$id.'</h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-8">'.PHP_EOL;
-				$dash .= '<h4 class="text-right"><small class="help-block">'.$ticket['properties']['Created'].'</small></h4>'.PHP_EOL;
+				$dash .= '<h5 class="text-right"><small class="help-block">'.$ticket['properties']['Created'].'</small></h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '<div class="col-sm-1">'.PHP_EOL;
 				$dash .= '<a rel="external" class="btn btn-default btn-xs pull-right" href="'.$this->url.'/Ticket/Display.html?id='.$id.'"><i class="glyphicon glyphicon-wrench"></i></a>';
@@ -100,9 +100,9 @@ class SPL_Request {
 				
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-12">'.PHP_EOL;
-				$dash .= '<h5>';
+				$dash .= '<h4>';
 				$dash .= '<a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'"><i class="glyphicon glyphicon-share"></i> '.$ticket['subject'].'</a>';
-				$dash .= '</h5>'.PHP_EOL;
+				$dash .= '</h4>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 

@@ -142,7 +142,7 @@ class SPL_Request {
 						//$text = preg_replace('/(\r\n|\n|\r){3,}/', "$1$1", $text);
 						//$text = nl2br($text);
 						$text = preg_replace('"(\r?\n){2,}"', "<br>", $text);
-						$dash .= '<p style="border-left:1px solid #ccc; padding-left: 10px;"><small>'.$text.'</small></p>'.PHP_EOL;
+						$dash .= '<p style="margin-top: 6px; border-left:1px solid #ccc; padding-left: 10px;"><small>'.$text.'</small></p>'.PHP_EOL;
 					}
 				}
 				$dash .= '</div>'.PHP_EOL;

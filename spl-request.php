@@ -39,7 +39,7 @@ class SPL_Request {
 		$open = $this->rt->search("Queue='Automation'ANDStatus='open'",'-Created', 's');
 		unset($open['']);
 
-		$keys = explode(',',array_keys($open));
+		$keys = implode(',',array_keys($open));
 
 		return '<pre>'.print_r($keys, true).'</pre>';
 	}

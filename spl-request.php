@@ -42,8 +42,6 @@ class SPL_Request {
 
 		$tickets = array();
 
-		return 'test';
-		
 		$dash = '';
 		$dash .= '<div class="panel spl-hero-intranet spl-hero-brand-blue-a">'.PHP_EOL;
 		$dash .= '<div class="panel-heading">'.PHP_EOL;

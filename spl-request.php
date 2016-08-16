@@ -99,7 +99,7 @@ class SPL_Request {
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-12">'.PHP_EOL;
 				$dash .= '<h5>';
-				$dash .= '<button style="padding:0;" class="btn btn-link">'.$ticket['subject'].'</button>';
+				$dash .= '<a href="#">'.$ticket['subject'].'</a>';
 				$dash .='</h5>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;

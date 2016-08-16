@@ -108,7 +108,7 @@ class SPL_Request {
 				$dash .= '<div class="row">'.PHP_EOL;
 				$dash .= '<div class="col-sm-12">'.PHP_EOL;
 				$dash .= '<h4>';
-				$dash .= '<small class="glyphicon glyphicon-share text-muted"></small> <a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'">'.$ticket['subject'].'</a>';
+				$dash .= '<i class="glyphicon glyphicon-share text-muted"></i> <a href="#" data-toggle="modal" data-target="#spl-rt-'.$id.'">'.$ticket['subject'].'</a>';
 				$dash .= '</h4>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
 				$dash .= '</div>'.PHP_EOL;
